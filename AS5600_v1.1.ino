@@ -69,9 +69,13 @@ void setup() {
     }
   }
 
+  //CAN Trasmit = 50Hz
   AS5600_CAN_Transmission.every(20, as5600_deg_send);
+  //read AS5600 = 100Hz
   AS5600_Read.every(10, as5600_deg_read);
+  //Serial Transmit = 5Hz
   UART_Status_Timer.every(200, print_sensor_value);
+  
 }
 
 
